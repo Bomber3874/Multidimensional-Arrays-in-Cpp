@@ -97,11 +97,11 @@ Steps:
 
 Key Code:
 
-for (int i = 0; i < row; i++) {
-    for (int j = 0; j < column; j++) {
-        arr3[i][j] = arr1[i][j] + arr2[i][j];
-    }
-}
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                arr3[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
 
 2. Matrix Multiplication (matrix_multi.cpp)
 
@@ -117,14 +117,14 @@ Steps:
 
 Key Code:
 
-for (int i = 0; i < row1; i++) {
-    for (int j = 0; j < column2; j++) {
-        arr3[i][j] = 0;
-        for (int k = 0; k < row2; k++) {
-            arr3[i][j] += arr1[i][k] * arr2[k][j];
+        for (int i = 0; i < row1; i++) {
+            for (int j = 0; j < column2; j++) {
+                arr3[i][j] = 0;
+                for (int k = 0; k < row2; k++) {
+                    arr3[i][j] += arr1[i][k] * arr2[k][j];
+                }
+            }
         }
-    }
-}
 
 3. Matrix Transpose (matrix_transpose.cpp)
 
@@ -140,11 +140,11 @@ Steps:
 
 Key Code:
 
-for (int i = 0; i < row; i++) {
-    for (int j = 0; j < column; j++) {
-        transpose[j][i] = arr[i][j];
-    }
-}
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                transpose[j][i] = arr[i][j];
+            }
+        }
 
 4. Diagonal Addition (matrix_diag_add.cpp)
 
@@ -160,16 +160,16 @@ Steps:
 
 Key Code:
 
-if (row != column) {
-    cout << "Error: Matrix must be square for diagonal addition." << endl;
-    return 1;
-}
-
-int primary_diag = 0, secondary_diag = 0;
-for (int i = 0; i < row; i++) {
-    primary_diag += arr[i][i];
-    secondary_diag += arr[i][column-1-i];
-}
+        if (row != column) {
+            cout << "Error: Matrix must be square for diagonal addition." << endl;
+            return 1;
+        }
+        
+        int primary_diag = 0, secondary_diag = 0;
+        for (int i = 0; i < row; i++) {
+            primary_diag += arr[i][i];
+            secondary_diag += arr[i][column-1-i];
+        }
 
 5. Row Comparison (matrix_row_compare.cpp)
 
@@ -185,17 +185,17 @@ Steps:
 
 Key Code:
 
-for (int j = 0; j < column; j++) {
-    if (arr[0][j] > arr[1][j]) {
-        cout << "Column " << j+1 << ": First row is greater." << endl;
-    }
-    else if (arr[0][j] < arr[1][j]) {
-        cout << "Column " << j+1 << ": First row is smaller." << endl;
-    }
-    else {
-        cout << "Column " << j+1 << ": Both rows are equal." << endl;
-    }
-}
+        for (int j = 0; j < column; j++) {
+            if (arr[0][j] > arr[1][j]) {
+                cout << "Column " << j+1 << ": First row is greater." << endl;
+            }
+            else if (arr[0][j] < arr[1][j]) {
+                cout << "Column " << j+1 << ": First row is smaller." << endl;
+            }
+            else {
+                cout << "Column " << j+1 << ": Both rows are equal." << endl;
+            }
+        }
 
 # Conclusion
 
