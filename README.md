@@ -87,14 +87,24 @@ Key Properties of Matrices:
 
 Steps:
 
-    Input dimensions (row, column) for both matrices.
+    Input the number of rows (m) and columns (n) for both matrices
 
-    Input elements for Matrix A and Matrix B.
+    Declare three 2D arrays: matrix1[m][n], matrix2[m][n], result[m][n]
 
-    Add corresponding elements and store in Matrix C.
+    Read elements for matrix1 row by row
 
-    Display all matrices.
+    Read elements for matrix2 row by row
 
+    For each row i from 0 to m-1:
+        a. For each column j from 0 to n-1:
+        i. result[i][j] = matrix1[i][j] + matrix2[i][j]
+
+    Display matrix1
+
+    Display matrix2
+
+    Display the result matrix
+    
 Key Code:
 
         for (int i = 0; i < row; i++) {
@@ -107,13 +117,26 @@ Key Code:
 
 Steps:
 
-    Input dimensions for Matrix A (row1 × column1) and Matrix B (row2 × column2).
+    Input rows (m) and columns (n) for first matrix
 
-    Check if column1 == row2 (valid for multiplication).
+    Input rows (p) and columns (q) for second matrix
 
-    Compute product using nested loops (dot product).
+    Verify n equals p (if not, show error and exit)
 
-    Display the resultant matrix.
+    Declare three matrices: matrix1[m][n], matrix2[p][q], result[m][q]
+
+    Read elements for matrix1
+
+    Read elements for matrix2
+
+    For each row i from 0 to m-1:
+    
+        a. For each column j from 0 to q-1:
+        i. Initialize result[i][j] = 0
+        ii. For k from 0 to n-1:
+        - result[i][j] += matrix1[i][k] * matrix2[k][j]
+
+    Display all three matrices
 
 Key Code:
 
@@ -130,13 +153,20 @@ Key Code:
 
 Steps:
 
-    Input dimensions (row, column).
+    Input number of rows (m) and columns (n)
 
-    Input matrix elements.
+    Declare original[m][n] and transpose[n][m]
 
-    Swap matrix[i][j] with transpose[j][i].
+    Read elements for original matrix
 
-    Display original and transposed matrices.
+    For each row i from 0 to m-1:
+    
+        a. For each column j from 0 to n-1:
+        i. transpose[j][i] = original[i][j]
+
+    Display original matrix
+
+    Display transposed matrix
 
 Key Code:
 
@@ -150,13 +180,24 @@ Key Code:
 
 Steps:
 
-    Input dimensions (must be square).
+    Input number of rows (m) and columns (n)
 
-    Check if row == column (else, error).
+    Verify m equals n (if not, show error and exit)
 
-    Sum primary and secondary diagonals.
+    Declare matrix[m][n]
 
-    Display results.
+    Read matrix elements
+
+    Initialize primary_sum = 0, secondary_sum = 0
+
+    For i from 0 to m-1:
+    
+        a. primary_sum += matrix[i][i]
+        b. secondary_sum += matrix[i][m-1-i]
+
+    Display matrix
+
+    Display both diagonal sums
 
 Key Code:
 
@@ -175,13 +216,20 @@ Key Code:
 
 Steps:
 
-    Input dimensions (must have at least 2 rows).
+    Input number of rows (m) and columns (n)
 
-    Input matrix elements.
+    Verify m ≥ 2 (if not, show error and exit)
 
-    Compare Row 0 and Row 1 element-wise.
+    Declare matrix[m][n]
 
-    Print comparison results.
+    Read matrix elements
+
+    For each column j from 0 to n-1:
+    
+        a. Compare matrix[0][j] and matrix[1][j]
+        b. Print comparison result for each column
+
+    Display full matrix
 
 Key Code:
 
